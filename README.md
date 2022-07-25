@@ -35,7 +35,7 @@
 ### ***Screenshots & Diagrams***
 
 #### ***ERD***
-![Diagram](https://i.imgur.com/bMXC7hS.jpg)
+![Diagram](https://i.imgur.com/VvJeozu.jpg)
 
 ### ***Future Updates***
 - [ ] Deliver MVP
