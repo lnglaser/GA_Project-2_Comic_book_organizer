@@ -11,6 +11,8 @@
 
 **MVP - The user will be able to add items with certain details to their collection, display selections from it, update item details and remove items.**
 
+[Trello](https://trello.com/b/2XKnurBO/ga-project-2-comic-book-organizer)
+
 ***
 ### ***Technologies***
 * JavaScript
@@ -23,21 +25,17 @@
 * Git
 * GitHub
 
-1. Item 1
-2. Item 2
-    * Sub-item
-
 ***
 ### ***Getting Started***
-1. Step 1
-2. Step 2
-    * Sub-step A
-    * Sub-step B
+1. Establish models
+2. Seed database
+3. Build frontend
+4. Link database to frontend
 ***
 ### ***Screenshots & Diagrams***
 
 #### ***ERD***
-![Diagram](https://i.imgur.com/su2UMeu.jpg)
+![Diagram](https://i.imgur.com/bMXC7hS.jpg)
 
 ### ***Future Updates***
 - [ ] Deliver MVP
