@@ -17,6 +17,8 @@ app.get("/serieslist", controllers.getAllSeries);
 
 app.get("/searchseries/:title", controllers.getSeriesByTitle);
 
+app.get("/searchissue/:series", controllers.getIssuesBySeries);
+
 app.get("/issuelist", controllers.getAllSingleIssues);
 
 app.post("/newseries", controllers.addNewSeries);

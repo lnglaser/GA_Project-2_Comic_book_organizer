@@ -21,10 +21,10 @@ const getAllSeries = async (request, response) => {
 
 const getSeriesByTitle = async(request, response) => {
     try{
-        const title = request.params
-        const series = await Series.findById(title)
+        const {title} = request.params
+        const series = await Series.find({title})
         if(title) {
-            return response.status(200).json()
+            return response.status(200).json(series)
         }
     } catch (e) {
         return response.status(500).send(e.message)
@@ -33,8 +33,11 @@ const getSeriesByTitle = async(request, response) => {
 
 const getIssuesBySeries = async (request, response) => {
     try{
-        const {} = await request.params
-        
+        const {series} = request.params
+        const issue = await Issue.find({series})
+        if(series) {
+            return response.status(200).json(issue)
+        }
     } catch (e) {
         return response.status(500).send(e.message)
     }
@@ -94,6 +97,7 @@ module.exports = {
     getAllSingleIssues,
     getAllSeries,
     getSeriesByTitle,
+    getIssuesBySeries,
     addNewSeries,
     addNewIssue,
     deleteIssue,
