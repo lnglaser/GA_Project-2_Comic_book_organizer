@@ -1,4 +1,4 @@
-const { response } = require('express')
+const { response, request } = require('express')
 const { Series, Issue } = require('../models')
 
 const getAllSingleIssues = async (request, response) => {
@@ -19,7 +19,19 @@ const getAllSeries = async (request, response) => {
     }
 }
 
-const getSeriesIssues = async (request, response) => {
+const getSeriesByTitle = async(request, response) => {
+    try{
+        const title = request.params
+        const series = await Series.findById(title)
+        if(title) {
+            return response.status(200).json()
+        }
+    } catch (e) {
+        return response.status(500).send(e.message)
+    }
+}
+
+const getIssuesBySeries = async (request, response) => {
     try{
         const {} = await request.params
         
@@ -41,17 +53,49 @@ const addNewSeries = async (request, response) => {
     }
 }
 
-// const deleteSeries = async (request, response) => {
-//     console.log("Series deleted")
-//     try{
-//         const series = await 
-//     } catch (e) {
-//         return response.status(500).send(e.message)
-//     }
-// }
+const addNewIssue = async (request, response) => {
+    console.log("New issue added")
+    console.log(request.body)
+    try{
+        const issue = await new Issue(request.body)
+        await issue.save()
+        return response.status(201).json({issue})
+    } catch (e){
+        return response.status(500).send(e.message)
+    }
+}
+
+const deleteIssue = async (request, response) => {
+    try{
+        const { id } = request.params
+        const deleted = await Issue.findByIdAndDelete(id)
+        if (deleted) {
+            return response.status(200).send('Issue removed')
+        }
+    } catch (e) {
+        return response.status(500).send(error.message)
+    }
+}
+
+const deleteSeries = async (request, response) => {
+    console.log("Series deleted")
+    try{
+        const { id } = request.params
+        const deleted = await Series.findByIdAndDelete(id)
+        if (deleted) {
+            return response.status(200).send('Series removed')
+        }
+    } catch (e) {
+        return response.status(500).send(e.message)
+    }
+}
+
 module.exports = {
     getAllSingleIssues,
     getAllSeries,
+    getSeriesByTitle,
     addNewSeries,
-    // deleteSeries
+    addNewIssue,
+    deleteIssue,
+    deleteSeries
 }
