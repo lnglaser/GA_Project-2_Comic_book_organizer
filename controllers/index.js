@@ -68,6 +68,25 @@ const addNewIssue = async (request, response) => {
     }
 }
 
+const updateSingleIssue = async (request, response) => {
+    console.log("Issue updated")
+    console.log(request.body)
+    try {
+        const { id } = request.params
+        await Issue.findByIdAndUpdate(id, request.body, {new: true}, (err, issue) => {
+            // if(err) {
+            //     response.status(500).send(err)
+            // }
+            if (!issue) {
+                response.status(500).send('Issue not in collection.')
+            }
+            return response.status(200).json({issue})
+        })
+    } catch (e) {
+        return response.status(500).send(e.message)
+    }
+}
+
 const deleteIssue = async (request, response) => {
     try{
         const { id } = request.params
@@ -100,6 +119,7 @@ module.exports = {
     getIssuesBySeries,
     addNewSeries,
     addNewIssue,
+    updateSingleIssue,
     deleteIssue,
     deleteSeries
 }

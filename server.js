@@ -25,6 +25,8 @@ app.post("/newseries", controllers.addNewSeries);
 
 app.post("/newissue", controllers.addNewIssue);
 
+app.put("/updateissue/:id", controllers.updateSingleIssue)
+
 app.delete("/removeseries/:id", controllers.deleteSeries);
 
 app.delete("/removeissue/:id", controllers.deleteIssue);
