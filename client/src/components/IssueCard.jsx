@@ -13,6 +13,8 @@ const IssueCard = (props) => {
             <p>Writer: {writer}</p>
             <p>Artist: {artist}</p>
             <p>Release date: {date}</p>
+            <button>Edit</button>
+            <button>Delete</button>
         </div>
     )
 }

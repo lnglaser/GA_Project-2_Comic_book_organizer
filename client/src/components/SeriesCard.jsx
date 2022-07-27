@@ -11,6 +11,7 @@ const SeriesCard = (props) => {
             <p>{publisher}</p>
             <p>{year}</p>
             <button>Edit</button>
+            <button value="http://localhost:3001/newissue">Add issue</button>
             <button>Delete</button>
         </div>
     )
