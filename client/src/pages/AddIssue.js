@@ -1,4 +1,4 @@
-const AddSeries = () => {
+const AddIssue = () => {
   return (
     <div className="AddIssueForm">
       <p>Add a new issue to a series</p>
@@ -6,17 +6,13 @@ const AddSeries = () => {
         <input type="text" name="title" placeholder="Input series name"></input>
         <input
           type="text"
-          name="publisher"
-          placeholder="Input publisher name"
+          name="issue_number"
+          placeholder="Input issue number"
         ></input>
-        <input
-          type="text"
-          name="Year"
-          placeholder="Input series start year"
-        ></input>
-        <button type="submit">Add Series</button>
+        <input type="text" name="date" placeholder="Input release date"></input>
+        <button type="submit">Add Issue</button>
       </form>
     </div>
   );
 };
-export default AddSeries;
+export default AddIssue;
