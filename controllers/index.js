@@ -74,15 +74,35 @@ const updateSingleIssue = async (request, response) => {
     try {
         const { id } = request.params
         await Issue.findByIdAndUpdate(id, request.body, {new: true}, (err, issue) => {
-            // if(err) {
-            //     response.status(500).send(err)
-            // }
+            if(err) {
+                response.status(500).send(err)
+            }
             if (!issue) {
                 response.status(500).send('Issue not in collection.')
+                console.log('issue not in collection')
             }
             return response.status(200).json({issue})
         })
     } catch (e) {
+        return response.status(500).send(e.message)
+    }
+}
+
+const updateSeries = async (request, response) => {
+    console.log("Series updated")
+    console.log(request.body)
+    try{
+        const { id } = request.params
+        await Series.findByIdAndUpdate(id, request.body, {new:true}, (err, series) =>{
+            if(err) {
+                response.status(500).send(err)
+            }
+            if (!series) {
+                response.status(500).send('Series not in collection')
+                console.log('Series not in collection')
+            }
+        })
+    } catch (e){
         return response.status(500).send(e.message)
     }
 }
@@ -120,6 +140,7 @@ module.exports = {
     addNewSeries,
     addNewIssue,
     updateSingleIssue,
+    updateSeries,
     deleteIssue,
     deleteSeries
 }
