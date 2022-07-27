@@ -73,16 +73,8 @@ const updateSingleIssue = async (request, response) => {
     console.log(request.body)
     try {
         const { id } = request.params
-        await Issue.findByIdAndUpdate(id, request.body, {new: true}, (err, issue) => {
-            if(err) {
-                response.status(500).send(err)
-            }
-            if (!issue) {
-                response.status(500).send('Issue not in collection.')
-                console.log('issue not in collection')
-            }
-            return response.status(200).json({issue})
-        })
+        const issue = await Issue.findByIdAndUpdate(id, request.body, {new: true})
+        response.status(200).json({issue})
     } catch (e) {
         return response.status(500).send(e.message)
     }
@@ -93,15 +85,8 @@ const updateSeries = async (request, response) => {
     console.log(request.body)
     try{
         const { id } = request.params
-        await Series.findByIdAndUpdate(id, request.body, {new:true}, (err, series) =>{
-            if(err) {
-                response.status(500).send(err)
-            }
-            if (!series) {
-                response.status(500).send('Series not in collection')
-                console.log('Series not in collection')
-            }
-        })
+        const series = await Series.findByIdAndUpdate(id, request.body, {new:true})
+        response.status(200).json({series})
     } catch (e){
         return response.status(500).send(e.message)
     }
@@ -111,9 +96,9 @@ const deleteIssue = async (request, response) => {
     try{
         const { id } = request.params
         const deleted = await Issue.findByIdAndDelete(id)
-        if (deleted) {
-            return response.status(200).send('Issue removed')
-        }
+        
+            response.status(200).send('Issue removed')
+        
     } catch (e) {
         return response.status(500).send(error.message)
     }
@@ -124,9 +109,9 @@ const deleteSeries = async (request, response) => {
     try{
         const { id } = request.params
         const deleted = await Series.findByIdAndDelete(id)
-        if (deleted) {
+        
             return response.status(200).send('Series removed')
-        }
+        
     } catch (e) {
         return response.status(500).send(e.message)
     }
