@@ -1,3 +1,14 @@
 .App {
   text-align: center;
 }
+
+.singleIssue, .series-card {
+  align-items: center;
+  max-width: 300px;
+  max-height: 380px;
+  border-radius: 4px;
+  background-color: #1b1b1b;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}

@@ -9,7 +9,7 @@ const IssueCard = (props) => {
 
     return(
         <div className="singleIssue">
-            <h3>Title: {series} #{issueNumber}</h3>
+            <h3>{series} #{issueNumber}</h3>
             <p>Writer: {writer}</p>
             <p>Artist: {artist}</p>
             <p>Release date: {date}</p>
