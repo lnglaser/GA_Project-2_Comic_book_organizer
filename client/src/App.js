@@ -13,10 +13,6 @@ import AddIssue from "./pages/AddIssue";
 import "./App.css";
 
 function App() {
-  const addIssueButton = useNavigate();
-  const redirectToAdd = () => {
-    addIssueButton("/newissue");
-  };
   return (
     <div className="App">
       <div>
@@ -30,7 +26,7 @@ function App() {
           <Route path="/searchseries" element={<SearchSeries />} />
           <Route path="/searchissues" element={<SearchIssues />} />
           <Route path="/newseries" element={<AddSeries />} />
-          <Route path="/newissue" element={<AddIssue />} />
+          <Route path="/newissue/:seriesName" element={<AddIssue />} />
         </Routes>
       </main>
     </div>

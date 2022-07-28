@@ -6,6 +6,7 @@ const IssueCard = (props) => {
     let writer = props.issue.writer
     let artist = props.issue.artist
     let date = props.issue.release_date
+    let issueId = props.issue._id
 
     return(
         <div className="singleIssue">
@@ -13,6 +14,7 @@ const IssueCard = (props) => {
             <p>Writer: {writer}</p>
             <p>Artist: {artist}</p>
             <p>Release date: {date}</p>
+            <small>Collection ID: {issueId}</small>
             <button>Edit</button>
             <button>Delete</button>
         </div>

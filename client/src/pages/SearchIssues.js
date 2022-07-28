@@ -1,3 +1,5 @@
+import IssueCard from "../components/IssueCard";
+
 const SearchIssues = (props) => {
   console.log(props);
 

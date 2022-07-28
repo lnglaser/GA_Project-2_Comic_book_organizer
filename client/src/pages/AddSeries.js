@@ -31,7 +31,7 @@ const AddSeries = () => {
         ></input>
         <input
           type="text"
-          name="Year"
+          name="launch_year"
           onChange={handleChange}
           placeholder="Input series start year"
         ></input>
