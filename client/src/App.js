@@ -9,6 +9,8 @@ import SearchSeries from "./pages/SearchSeries";
 import SearchIssues from "./pages/SearchIssues";
 import AddSeries from "./pages/AddSeries";
 import AddIssue from "./pages/AddIssue";
+import EditSeries from "./pages/EditSeries";
+import EditIssue from "./pages/EditIssue";
 
 import "./App.css";
 
@@ -27,6 +29,8 @@ function App() {
           <Route path="/searchissues" element={<SearchIssues />} />
           <Route path="/newseries" element={<AddSeries />} />
           <Route path="/newissue/:seriesName" element={<AddIssue />} />
+          <Route path="/updateseries/:id" element={<EditSeries />} />
+          <Route path="/updateissue/:id" element={<EditIssue />} />
         </Routes>
       </main>
     </div>

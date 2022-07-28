@@ -8,6 +8,7 @@ const PORT = process.env.PORT || 3001;
 
 app.use(express.json());
 app.use(logger("dev"));
+app.use(cors());
 
 app.get("/", (request, response) => {
   response.send("Testing basic route");
@@ -23,7 +24,7 @@ app.get("/issuelist", controllers.getAllSingleIssues);
 
 app.post("/newseries", controllers.addNewSeries);
 
-app.post("/newissue", controllers.addNewIssue);
+app.post("/newissue/:seriesName", controllers.addNewIssue);
 
 app.put("/updateissue/:id", controllers.updateSingleIssue);
 
