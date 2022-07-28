@@ -7,18 +7,18 @@ import IssueCard from "../components/IssueCard";
 const DisplayIssues = () => {
   const [issues, setIssues] = useState([]);
 
+  const showAllIssues = async () => {
+    const response = await axios.get("http://localhost:3001/issuelist");
+    setIssues(response.data.singleIssue);
+  };
   useEffect(() => {
-    const showAllIssues = async () => {
-      const response = await axios.get("http://localhost:3001/issuelist");
-      setIssues(response.data.singleIssue);
-    };
     showAllIssues();
   }, []);
   return (
     <div className="IssueList">
       <h2>Complete collection</h2>
       {issues.map((issue) => (
-        <IssueCard issue={issue} />
+        <IssueCard issue={issue} showAllIssues={showAllIssues} />
       ))}
     </div>
   );

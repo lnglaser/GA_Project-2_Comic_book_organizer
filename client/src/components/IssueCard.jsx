@@ -1,3 +1,4 @@
+import axios from "axios"
 import { Link } from "react-router-dom"
 
 const IssueCard = (props) => {
@@ -10,6 +11,11 @@ const IssueCard = (props) => {
     let date = props.issue.release_date
     let issueId = props.issue._id
 
+    const handleDelete = async () => {
+        await axios.delete(`http://localhost:3001/removeissue/${issueId}`)
+        props.showAllIssues();
+    }
+    
     
     return(
         <div className="singleIssue">
@@ -18,10 +24,10 @@ const IssueCard = (props) => {
             <p>Artist: {artist}</p>
             <p>Release date: {date}</p>
             {/* <small>Collection ID: {issueId}</small> */}
-            <form>
+            
             <Link to={`/updateissue/${issueId}`}><button type="submit">Edit</button></Link>
-            <button>Delete</button>
-            </form>
+            <button type="submit" onClick={handleDelete}>Delete</button>
+            
         </div>
     )
 }
