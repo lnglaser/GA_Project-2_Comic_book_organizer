@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 const IssueCard = (props) => {
     console.log(props)
 
@@ -8,6 +10,7 @@ const IssueCard = (props) => {
     let date = props.issue.release_date
     let issueId = props.issue._id
 
+    
     return(
         <div className="singleIssue">
             <h3>{series} #{issueNumber}</h3>
@@ -15,8 +18,10 @@ const IssueCard = (props) => {
             <p>Artist: {artist}</p>
             <p>Release date: {date}</p>
             <small>Collection ID: {issueId}</small>
-            <button>Edit</button>
+            <form>
+            <Link to={`/updateissue/${issueId}`}><button type="submit">Edit</button></Link>
             <button>Delete</button>
+            </form>
         </div>
     )
 }
