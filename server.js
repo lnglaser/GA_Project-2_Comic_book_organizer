@@ -9,6 +9,7 @@ const PORT = process.env.PORT || 3001;
 app.use(express.json());
 app.use(logger("dev"));
 app.use(cors());
+app.use(express.static(`${__dirname}/client/build`));
 
 app.get("/", (request, response) => {
   response.send("Testing basic route");
@@ -33,6 +34,10 @@ app.put("/updateseries/:id", controllers.updateSeries);
 app.delete("/removeseries/:id", controllers.deleteSeries);
 
 app.delete("/removeissue/:id", controllers.deleteIssue);
+
+app.get("/*", (req, res) => {
+  res.sendFile(`${__dirname}/client/build/index.html`);
+});
 
 app.listen(PORT, () => {
   console.log(`Express server listening on port ${PORT}`);
