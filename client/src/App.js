@@ -11,6 +11,7 @@ import AddSeries from "./pages/AddSeries";
 import AddIssue from "./pages/AddIssue";
 import EditSeries from "./pages/EditSeries";
 import EditIssue from "./pages/EditIssue";
+import DeleteIssue from "./pages/DeleteIssue";
 
 import "./App.css";
 
@@ -31,6 +32,7 @@ function App() {
           <Route path="/newissue/:seriesName" element={<AddIssue />} />
           <Route path="/updateseries/:id" element={<EditSeries />} />
           <Route path="/updateissue/:id" element={<EditIssue />} />
+          <Route path="/removeissue/:id" element={<DeleteIssue />} />
         </Routes>
       </main>
     </div>
