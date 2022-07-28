@@ -23,8 +23,8 @@ const SeriesCard = (props) => {
             <p>{year}</p>
             <small>Collection ID: {seriesId}</small>
             <div classname="button-row">
-            <button>Edit</button>
             <form>
+                <Link to={`/updateseries/${seriesId}`}><button type="submit">Edit</button></Link>
                 <Link to={`/newissue/${title}`}><button type="submit">Add issue</button></Link>
             </form>
             <button>Delete</button>

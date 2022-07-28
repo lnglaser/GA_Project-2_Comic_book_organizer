@@ -2,21 +2,23 @@ import axios from "axios";
 import { useState } from "react";
 import { useParams } from "react-router";
 
-const AddIssue = (e) => {
-  // const initialState ={
-  //     series: "",
-  //     issueNumber: "",
-  //     release_date: ""
-  // }
-  const [form, setForm] = useState("");
+const AddIssue = () => {
+  const { seriesName } = useParams();
+  const initialState = {
+    series: seriesName,
+    issueNumber: "",
+    release_date: "",
+    writer: "",
+    artist: "",
+  };
+  const [form, setForm] = useState(initialState);
   const handleChange = (event) => {
     setForm({ ...form, [event.target.name]: event.target.value });
   };
 
-  const { seriesName } = useParams();
-
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log(form);
     let response = await axios.post(
       `http://localhost:3001/newissue/${seriesName}`,
       form
@@ -32,8 +34,8 @@ const AddIssue = (e) => {
           type="text"
           name="series"
           onChange={handleChange}
-          value={seriesName}
-          placeholder="Input series name"
+          //   value={seriesName}
+          placeholder={seriesName}
           disabled
         ></input>
         <input
@@ -47,6 +49,18 @@ const AddIssue = (e) => {
           name="release_date"
           onChange={handleChange}
           placeholder="Input release date"
+        ></input>
+        <input
+          type="text"
+          name="writer"
+          onChange={handleChange}
+          placeholder="Input writer name"
+        ></input>
+        <input
+          type="text"
+          name="artist"
+          onChange={handleChange}
+          placeholder="Input artist name"
         ></input>
         <button type="submit" onClick={handleSubmit}>
           Add Issue
