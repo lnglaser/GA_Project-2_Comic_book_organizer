@@ -66,7 +66,7 @@ const EditSeries = () => {
         ></input>
 
         <button type="submit" onClick={handleSubmit}>
-          Add Series
+          Edit Series
         </button>
       </form>
     </div>

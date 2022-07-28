@@ -32,7 +32,7 @@ function App() {
           <Route path="/newissue/:seriesName" element={<AddIssue />} />
           <Route path="/updateseries/:id" element={<EditSeries />} />
           <Route path="/updateissue/:id" element={<EditIssue />} />
-          <Route path="/removeissue/:id" element={<DeleteIssue />} />
+          {/* <Route path="/removeissue/:id" element={<DeleteIssue />} /> */}
         </Routes>
       </main>
     </div>
