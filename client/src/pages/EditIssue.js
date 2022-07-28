@@ -3,19 +3,21 @@ import React from "react";
 import { useState } from "react";
 import { useParams } from "react-router";
 
-const EditIssue = () => {
+const EditIssue = (props) => {
   const { id } = useParams();
   console.log(id);
   //   const { title } = useParams();
   //   console.log(title);
   const initialState = {
     _id: id,
-    series: "",
-    issueNumber: "",
-    release_date: "",
-    writer: "",
-    artist: "",
+    series: props.issue.series,
+    issueNumber: props.issue.issueNumber,
+    release_date: props.issue.release_date,
+    writer: props.issue.writer,
+    artist: props.issue.artist,
   };
+
+  console.log(props);
 
   const [form, setForm] = useState(initialState);
   const handleChange = (event) => {
