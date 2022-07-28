@@ -12,8 +12,9 @@ const EditIssue = () => {
     _id: id,
     series: "",
     issueNumber: "",
-    number_of_issues: "",
-    publisher: "",
+    release_date: "",
+    writer: "",
+    artist: "",
   };
 
   const [form, setForm] = useState(initialState);
@@ -35,38 +36,44 @@ const EditIssue = () => {
       <form>
         <input
           type="_id"
-          name="title"
+          name="id"
           onChange={handleChange}
           placeholder={id}
           disabled
         ></input>
         <input
           type="text"
-          name="title"
+          name="series"
           onChange={handleChange}
           placeholder="Input new series name"
         ></input>
         <input
           type="text"
-          name="launch_year"
+          name="issueNumber"
           onChange={handleChange}
-          placeholder="Input new series start year"
+          placeholder="Input new issue number"
         ></input>
         <input
           type="text"
-          name="number_of_issues"
+          name="release_date"
           onChange={handleChange}
-          placeholder="Input new number of issues"
+          placeholder="Input new release date"
         ></input>
         <input
           type="text"
-          name="publisher"
+          name="writer"
           onChange={handleChange}
-          placeholder="Input new publisher name"
+          placeholder="Input new writer"
+        ></input>
+        <input
+          type="text"
+          name="artist"
+          onChange={handleChange}
+          placeholder="Input new artist"
         ></input>
 
         <button type="submit" onClick={handleSubmit}>
-          Add Series
+          Update Issue
         </button>
       </form>
     </div>

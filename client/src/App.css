@@ -24,3 +24,11 @@
 .button-row {
   padding: 0.5em;
 }
+
+header {
+  background-color: #e57bf6;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 3em;
+}

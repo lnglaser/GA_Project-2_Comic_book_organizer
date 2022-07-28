@@ -17,7 +17,7 @@ const IssueCard = (props) => {
             <p>Writer: {writer}</p>
             <p>Artist: {artist}</p>
             <p>Release date: {date}</p>
-            <small>Collection ID: {issueId}</small>
+            {/* <small>Collection ID: {issueId}</small> */}
             <form>
             <Link to={`/updateissue/${issueId}`}><button type="submit">Edit</button></Link>
             <button>Delete</button>

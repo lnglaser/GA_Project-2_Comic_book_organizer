@@ -21,7 +21,7 @@ const SeriesCard = (props) => {
             <h3>{title}</h3>
             <p>{publisher}</p>
             <p>{year}</p>
-            <small>Collection ID: {seriesId}</small>
+            {/* <small>Collection ID: {seriesId}</small> */}
             <div classname="button-row">
             <form>
                 <Link to={`/updateseries/${seriesId}`}><button type="submit">Edit</button></Link>
