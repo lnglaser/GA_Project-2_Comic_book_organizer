@@ -11,6 +11,8 @@ const SeriesCard = (props) => {
     const redirectToAdd = () => {
     addIssueButton("/newissue");
   };
+
+//   let formFill = title
     return (
         <div className="series-card">
             <h3>{title}</h3>
