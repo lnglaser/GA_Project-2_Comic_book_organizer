@@ -35,7 +35,7 @@ const AddSeries = () => {
           onChange={handleChange}
           placeholder="Input series start year"
         ></input>
-        <button type="submit" onClick={handleSubmit}>
+        <button type="submit" onClick={handleSubmit} class="MenuButton Confirm">
           Add Series
         </button>
       </form>

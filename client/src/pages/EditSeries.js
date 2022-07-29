@@ -65,7 +65,7 @@ const EditSeries = () => {
           placeholder="Input new publisher name"
         ></input>
 
-        <button type="submit" onClick={handleSubmit}>
+        <button type="submit" onClick={handleSubmit} class="MenuButton Confirm">
           Edit Series
         </button>
       </form>

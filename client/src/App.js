@@ -11,7 +11,7 @@ import AddSeries from "./pages/AddSeries";
 import AddIssue from "./pages/AddIssue";
 import EditSeries from "./pages/EditSeries";
 import EditIssue from "./pages/EditIssue";
-import DeleteIssue from "./pages/DeleteIssue";
+// import DeleteIssue from "./pages/DeleteIssue";
 
 import "./App.css";
 

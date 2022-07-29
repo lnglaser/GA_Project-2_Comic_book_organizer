@@ -32,9 +32,9 @@ const SeriesCard = (props) => {
             {/* <small>Collection ID: {seriesId}</small> */}
             <div classname="button-row">
             
-                <Link to={`/updateseries/${seriesId}`}><button type="submit">Edit</button></Link>
-                <Link to={`/newissue/${title}`}><button type="submit">Add issue</button></Link>
-                <button type="submit" onClick={handleDelete}>Delete</button>
+                <Link to={`/updateseries/${seriesId}`}><button type="submit" >Edit</button></Link>
+                <Link to={`/newissue/${title}`}><button type="submit" >Add issue</button></Link>
+                <button type="submit" onClick={handleDelete} className="Delete">Delete</button>
             </div>
         </div>
     )
