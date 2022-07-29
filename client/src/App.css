@@ -40,6 +40,11 @@ header nav a {
   justify-content: space-around;
 }
 
+.coverArt {
+  background-color: white;
+  justify-content: space-around;
+}
+
 .container-grid {
   padding: 2em 0;
   display: grid;

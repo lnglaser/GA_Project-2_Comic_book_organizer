@@ -10,6 +10,7 @@ const AddIssue = () => {
     release_date: "",
     writer: "",
     artist: "",
+    coverArt: "",
   };
   const [form, setForm] = useState(initialState);
   const handleChange = (event) => {
@@ -61,6 +62,12 @@ const AddIssue = () => {
           name="artist"
           onChange={handleChange}
           placeholder="Input artist name"
+        ></input>
+        <input
+          type="text"
+          name="coverArt"
+          onChange={handleChange}
+          placeholder="Paste image URL"
         ></input>
         <button type="submit" onClick={handleSubmit}>
           Add Issue

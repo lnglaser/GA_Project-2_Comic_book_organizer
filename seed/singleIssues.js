@@ -4,9 +4,7 @@ const { Series } = require("../models/");
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
 const main = async () => {
-    Series.collection.drop(
-        Issue.collection.drop()
-    )
+  Series.collection.drop(Issue.collection.drop());
   const series1 = await new Series({
     title: "Monstress",
     launch_year: "2016",
@@ -30,6 +28,8 @@ const main = async () => {
       writer: "Marjorie Liu",
       artist: "Sana Takeda",
       release_date: "2015-11-04",
+      cover_art:
+        "https://retailerservices.diamondcomics.com/Image/ItemMainImageLowRes/STL192650.jpg",
     },
     {
       series: series1.title,
