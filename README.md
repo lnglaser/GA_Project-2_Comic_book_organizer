@@ -37,7 +37,8 @@
 1. Establish models
 2. Seed database
 3. Build frontend
-4. Link database to frontend
+4. Determine paths
+5. Link database to frontend
 
 ---
 
