@@ -1,20 +1,27 @@
 * {
   /* margin: 0; */
-  padding: 0;
+  padding: 3px;
   box-sizing: border-box;
-  color: white
+  /* color: white */
 }
 
 header {
-  background-color: #e57bf6;
+  background-color: purple;
+  text-decoration: none;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
   height: 3em;
 }
 
 header nav a {
   margin: 0 1em;
+  text-decoration: none;
+  color: white;
+}
+
+#homebutton {
+  font-size: 2em;
 }
 
 .App {
@@ -30,6 +37,7 @@ header nav a {
   color: white;
   cursor: pointer;
   transition: all 0.2s;
+  justify-content: space-around;
 }
 
 .container-grid {
@@ -44,10 +52,3 @@ header nav a {
   padding: 0.5em;
 }
 
-header {
-  background-color: #e57bf6;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  height: 3em;
-}

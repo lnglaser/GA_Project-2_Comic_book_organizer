@@ -15,12 +15,14 @@ const DisplayIssues = () => {
     showAllIssues();
   }, []);
   return (
-    <div className="IssueList container-grid">
+    <>
       <h2>Complete collection</h2>
-      {issues.map((issue) => (
-        <IssueCard issue={issue} showAllIssues={showAllIssues} />
-      ))}
-    </div>
+      <div className="IssueList container-grid">
+        {issues.map((issue) => (
+          <IssueCard issue={issue} showAllIssues={showAllIssues} />
+        ))}
+      </div>
+    </>
   );
 };
 export default DisplayIssues;

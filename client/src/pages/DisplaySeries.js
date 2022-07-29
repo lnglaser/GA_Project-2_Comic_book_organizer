@@ -16,12 +16,14 @@ const DisplaySeries = () => {
     showAllSeries();
   }, []);
   return (
-    <div className="SeriesList container-grid">
+    <>
       <h2>List of Series</h2>
-      {series.map((series) => (
-        <SeriesCard series={series} showAllSeries={showAllSeries} />
-      ))}
-    </div>
+      <div className="SeriesList container-grid">
+        {series.map((series) => (
+          <SeriesCard series={series} showAllSeries={showAllSeries} />
+        ))}
+      </div>
+    </>
   );
 };
 export default DisplaySeries;

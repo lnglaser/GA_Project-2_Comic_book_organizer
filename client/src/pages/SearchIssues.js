@@ -1,3 +1,5 @@
+// First additional feature to be implemented
+
 import IssueCard from "../components/IssueCard";
 
 const SearchIssues = (props) => {

@@ -5,12 +5,14 @@ const Header = () => {
         <header>
             <nav>
                 <div>
-                <Link to = '/'>Home</Link>
+                <Link to = '/' id='HomeButton'>Attic</Link>
                 <Link to = '/serieslist'>View Series</Link>
                 <Link to = '/issuelist'>View Issues</Link>
-                <Link to = '/searchseries'>Search series titles</Link>
-                <Link to = '/searchissues'>Search single issues</Link>
                 <Link to = '/newseries'>Add a new series</Link>
+
+                {/* Leaving links in nav component for future implementation of search function(s) - refer to comments in SearchIssues.js and SearchSeries.js */}
+                {/* <Link to = '/searchseries'>Search series titles</Link> */}
+                {/* <Link to = '/searchissues'>Search single issues</Link> */}
                 </div>
             </nav>
         </header>
