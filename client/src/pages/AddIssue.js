@@ -69,7 +69,7 @@ const AddIssue = () => {
           onChange={handleChange}
           placeholder="Paste image URL"
         ></input>
-        <button type="submit" onClick={handleSubmit}>
+        <button type="submit" onClick={handleSubmit} class="MenuButton Confirm">
           Add Issue
         </button>
       </form>

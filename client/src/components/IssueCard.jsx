@@ -25,7 +25,6 @@ const IssueCard = (props) => {
             <p>Writer: {writer}</p>
             <p>Artist: {artist}</p>
             <p>Release date: {date}</p>
-            {/* <small>Collection ID: {issueId}</small> */}
             
             <Link to={`/updateissue/${issueId}`}><button type="submit" className="MenuButton">Edit</button></Link>
             <button type="submit" onClick={handleDelete} className="MenuButton Delete">Delete</button>

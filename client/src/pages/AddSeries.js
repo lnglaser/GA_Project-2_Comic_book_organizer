@@ -11,7 +11,6 @@ const AddSeries = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     let response = await axios.post("http://localhost:3001/newseries", form);
-    console.log(response);
   };
   return (
     <div className="AddSeriesForm">

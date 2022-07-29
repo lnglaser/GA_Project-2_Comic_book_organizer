@@ -1,3 +1,5 @@
+// First additional feature to be implemented - undecided as to where it will be added
+
 const SearchIssues = (props) => {
     console.log(props);
   

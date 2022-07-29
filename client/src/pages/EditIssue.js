@@ -72,6 +72,14 @@ const EditIssue = () => {
           placeholder="Input new artist"
         ></input>
 
+        {/* Styling feature to be implemented - add cover art */}
+        {/* <input
+          type="text"
+          name="cover_art"
+          onChange={handleChange}
+          placeholder="Paste image URL"
+        ></input> */}
+
         <button type="submit" onClick={handleSubmit} class="MenuButton Confirm">
           Update Issue
         </button>
