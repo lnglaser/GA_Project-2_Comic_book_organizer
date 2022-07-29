@@ -1,0 +1,1 @@
+// This file is an artifact - I was originally going to have the delete function on a separate page, before I attached it directly to the buttons on the series and issue cards. For reasons I need to figure out, not having this file stop the app from compiling. Once I do, I will remove this.
