@@ -15,7 +15,7 @@ const DisplayIssues = () => {
     showAllIssues();
   }, []);
   return (
-    <div className="IssueList">
+    <div className="IssueList container-grid">
       <h2>Complete collection</h2>
       {issues.map((issue) => (
         <IssueCard issue={issue} showAllIssues={showAllIssues} />

@@ -16,7 +16,7 @@ const DisplaySeries = () => {
     showAllSeries();
   }, []);
   return (
-    <div className="SeriesList">
+    <div className="SeriesList container-grid">
       <h2>List of Series</h2>
       {series.map((series) => (
         <SeriesCard series={series} showAllSeries={showAllSeries} />
