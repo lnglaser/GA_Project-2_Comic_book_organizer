@@ -28,8 +28,6 @@ const main = async () => {
       writer: "Marjorie Liu",
       artist: "Sana Takeda",
       release_date: "2015-11-04",
-      cover_art:
-        "https://retailerservices.diamondcomics.com/Image/ItemMainImageLowRes/STL192650.jpg",
     },
     {
       series: series1.title,
