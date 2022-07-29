@@ -50,6 +50,7 @@
 ### **_Future Updates_**
 
 - [x] Deliver MVP
+- [ ] Refactor editing to prevent unwanted changes
 - [ ] Search functions
 - [ ] Organization feature - group by series
 - [ ] Organization feature - separate single issues from trades/manga volumes
