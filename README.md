@@ -1,11 +1,14 @@
 # GA_Project-2_Comic_book_organizer
+
 ### By: Leon Glaser
-[LinkedIn](https://www.linkedin.com/in/leon-glaser) | 
+
+[LinkedIn](https://www.linkedin.com/in/leon-glaser) |
 [Twitter](https://twitter.com/sirescapist) |
 [GitHub](https://github.com/lnglaser)
 
-***
-### ***Description***
+---
+
+### **_Description_**
 
 #### **The aim of this project is to create a simple app for the purpose of organizing and tracking a personal collection of items - in this case, comic books.**
 
@@ -13,32 +16,41 @@
 
 [Trello](https://trello.com/b/2XKnurBO/ga-project-2-comic-book-organizer)
 
-***
-### ***Technologies***
-* JavaScript
-    * React
-    * NodeJS
-* HMTL
-* CSS
-* MongoDB
-* Express
-* Git
-* GitHub
+---
 
-***
-### ***Getting Started***
+### **_Technologies_**
+
+- JavaScript
+  - React
+  - NodeJS
+- HMTL
+- CSS
+- MongoDB
+- Express
+- Git
+- GitHub
+
+---
+
+### **_Getting Started_**
+
 1. Establish models
 2. Seed database
 3. Build frontend
 4. Link database to frontend
-***
-### ***Screenshots & Diagrams***
 
-#### ***ERD***
+---
+
+### **_Screenshots & Diagrams_**
+
+#### **_ERD_**
+
 ![Diagram](https://i.imgur.com/VvJeozu.jpg)
 
-### ***Future Updates***
-- [ ] Deliver MVP
+### **_Future Updates_**
+
+- [x] Deliver MVP
+- [ ] Search functions
 - [ ] Organization feature - group by series
 - [ ] Organization feature - separate single issues from trades/manga volumes
 - [ ] Organization feature - prevent duplicate series
