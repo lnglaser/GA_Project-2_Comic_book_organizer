@@ -14,6 +14,8 @@
 
 **MVP - The user will be able to add items with certain details to their collection, display selections from it, update item details and remove items.**
 
+[Deployed MVP Build](https://attic-comic-book-organizer.herokuapp.com/)
+
 [Trello](https://trello.com/b/2XKnurBO/ga-project-2-comic-book-organizer)
 
 ---
