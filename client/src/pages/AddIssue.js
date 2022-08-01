@@ -35,7 +35,6 @@ const AddIssue = () => {
           type="text"
           name="series"
           onChange={handleChange}
-          //   value={seriesName}
           placeholder={seriesName}
           disabled
         ></input>

@@ -16,20 +16,16 @@ const SeriesCard = (props) => {
         props.showAllSeries();
     }
 
-//     const addIssueButton = useNavigate();
-//     const redirectToAdd = () => {
-//     addIssueButton("/newissue");
-//   };
 
 
     
-//   let formFill = title
+
     return (
         <div className="series-card">
             <h3>{title}</h3>
             <p>{publisher}</p>
             <p>{year}</p>
-            {/* <small>Collection ID: {seriesId}</small> */}
+            
             <div classname="button-row">
             
                 <Link to={`/updateseries/${seriesId}`}><button type="submit" >Edit</button></Link>
